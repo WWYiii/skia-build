@@ -29,7 +29,8 @@ jobs:
         run: python3 script/check_release.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
         if: ${{ github.event.inputs.skip_release != 'true' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+      - uses: abdes/gha-setup-ninja@660f330a40aefa8d11632b3f901e92a4adb33d65
       - uses: microsoft/setup-msbuild@v1
       - uses: ilammy/msvc-dev-cmd@v1
       - shell: bash
