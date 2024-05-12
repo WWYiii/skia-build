@@ -19,7 +19,7 @@ def main():
   #     return 1
   #   return 0
   # except urllib.error.URLError as e:
-     return 0
+  return 0
 
 if __name__ == '__main__':
   sys.exit(main())
